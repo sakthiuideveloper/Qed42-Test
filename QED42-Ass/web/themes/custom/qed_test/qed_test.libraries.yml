@@ -1,0 +1,16 @@
+global_style:
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+      css/fontawesome.min.css: {}
+      css/slick.css: {}
+      css/style.css: {}
+  js:
+    dist/slick.min.js: {}
+    dist/main.js: {}
+  dependencies:
+  - de_theme/ssm
+  - de_theme/slick
+  - core/modernizr
+  - core/jquery
+  - core/drupal

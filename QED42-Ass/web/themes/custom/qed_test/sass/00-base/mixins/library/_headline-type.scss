@@ -1,0 +1,11 @@
+@mixin headline-type{
+  font-size: ms();
+  line-height: ms(1);
+  font-family: $font-set-3;
+  @include breakpoint($narrow-screen) {
+    font-size: 1.4em;
+  }
+  b,strong{
+    font-weight: $normal;
+  }
+}

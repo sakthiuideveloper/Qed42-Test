@@ -1,0 +1,80 @@
+$component: ".quotes";
+
+#{$component} {
+	max-width: 920px;
+	margin: 0 auto;
+	@include breakpoint($standard-screen) {
+		padding-bottom: 20px;
+	}
+	&__icons {
+		font-size: 2em;
+		color: $ui-grey;
+		@include breakpoint($standard-screen) {
+			font-size: 3em;
+		}
+	}
+	&__wrap {
+		.field--name-body {
+			margin: 20px 0;
+			@include breakpoint($standard-screen) {
+				margin: 40px 0;
+			}
+			p {
+				font-size: 24px;
+				color: $dark_media_kit;
+				font-family: $font-set-light;
+				font-weight: 600;
+				@include breakpoint($standard-screen) {
+					font-size: 32px;
+				}
+			}
+		}
+	}
+	&__profile-info {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 520px;
+		margin: 0 auto;
+		justify-content: center;
+	}
+	&__author-img {
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		overflow: hidden;
+		@include breakpoint($standard-screen) {
+			height: 120px;
+			width: 120px;
+		}
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__author-info {
+		flex: 0 0 50%;
+		padding: 0 0 0 10px;
+		text-align: left;
+		@include breakpoint($standard-screen) {
+			padding: 20px 0 0 20px;
+		}
+		.field--name-field-quote-author-designation {
+			font-size: 14px;
+			color: $dark_media_kit;
+			font-family: $font-set-light;
+			font-weight: 600;
+			@include breakpoint($standard-screen) {
+				font-size: 22px;
+			}
+		}
+		.field--name-field-quote-auth {
+			font-size: 20px;
+			color: $dark_media_kit;
+			font-family: $font-set-light;
+			font-weight: 600;
+			@include breakpoint($standard-screen) {
+				font-size: 26px;
+			}
+		}
+	}
+}

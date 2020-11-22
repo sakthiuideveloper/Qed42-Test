@@ -1,0 +1,70 @@
+.bkg_purple {
+    background: $bkg_purple;
+    padding: 50px 0;
+}
+.bkg_grey {
+    background: $bkg_dark_grey;
+    padding: 30px 0;
+    @include breakpoint($standard-screen) {
+        padding: 80px 0;
+    }
+}
+.bkg_light_grey {
+    background: $bkg_light_grey;
+    padding: 30px 0;
+    @include breakpoint($standard-screen) {
+        padding: 80px 0;
+    }
+}
+.bkg_light_grey2 {
+    background: $bkg_light_grey2;
+    padding: 50px 0;
+}
+.bkg_white {
+    background: $bkg_white;
+    padding: 30px 0;
+    @include breakpoint($standard-screen) {
+        padding: 50px 0 80px;
+    }
+}
+.image_with_bkg_color {
+    background: $bkg_purple url("/themes/custom/qed_test/images/bg/image\ bg@3X.png") no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    position: relative;
+    &::after {
+        content: '';
+        background: rgba(51, 58, 69, 0.95);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+.bkg_twitter_img {
+    background: url('/themes/custom/qed_test/images/bg/Layer\ 31@3X.png');
+    padding: 50px 0;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint($standard-screen) {
+        padding: 150px 0;
+    }
+    &::after {
+        content: '';
+        background: rgba(51,58,69, 0.5);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}

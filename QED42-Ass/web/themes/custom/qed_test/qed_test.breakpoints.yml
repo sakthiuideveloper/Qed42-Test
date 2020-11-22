@@ -1,0 +1,44 @@
+qed_test.xsmall:
+  label: xsmall
+  mediaQuery: '(max-width: 800px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+qed_test.small:
+  label: small
+  mediaQuery: 'all and (min-width: 801px) and (max-width: 1080px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 1.5x
+    - 2x
+    - 2.6x
+
+qed_test.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 1081px) and (max-width: 1440px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 1.5x
+    - 2x
+    - 3x
+    - 3.5x
+    - 4x
+
+qed_test.large:
+  label: large
+  mediaQuery: 'all and (min-width: 1441px) and (max-width: 2559px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+
+qed_test.xlarge:
+  label: xlarge
+  mediaQuery: 'all and (min-width: 2560px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x

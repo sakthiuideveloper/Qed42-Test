@@ -1,0 +1,38 @@
+$component: ".footer";
+
+#{$component} {
+	background: $light_purple;
+	padding: 30px 0;
+	&__social-icon {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		li {
+			display: inline-block;
+			.btn-social {
+				width: 36px;
+				height: 36px;
+				border: 3px solid $grey;
+				border-radius: 50px;
+				color: $grey;
+				display: block;
+				text-align: center;
+				line-height: 32px;
+			}
+		}
+	}
+	&__copyright__inner {
+		@include breakpoint($small-screen-max) {
+			margin-top: 20px;
+		}
+		.fa-copyright {
+			color: $grey;
+			font-size: 2.2em;
+			vertical-align: middle;
+			margin-right: 30px;
+		}
+		span {
+			color: $light_media_kit;
+		}
+	}
+}

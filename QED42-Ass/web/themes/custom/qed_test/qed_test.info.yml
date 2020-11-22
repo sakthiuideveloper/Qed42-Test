@@ -1,0 +1,23 @@
+name: QED42
+type: theme
+base theme: classy
+description: QED42 theme based on the classy base theme.
+core: 8.x
+
+libraries:
+  - qed_test/global_style
+
+regions:
+  header         : 'Header'
+  search         : 'Search'
+  primary_menu   : 'Primary Menu'
+  secondary_menu : 'Secondary Menu'
+  breadcrumb     : 'Breadcrumb'
+  highlighted    : 'Highlighted'
+  help           : 'Help'
+  content        : 'Content'
+  sidebar_first  : 'Sidebar First'
+  sidebar_second : 'Sidebar Second'
+  footer         : 'Footer'
+  hidden         : 'Hidden'
+ 

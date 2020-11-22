@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'arialmt';
+	src: url('../fonts/arialmt/arialmt.eot');
+	src: local('☺'), url('../fonts/arialmt/arialmt.woff') format('woff'), url('../fonts/arialmt/arialmt.ttf') format('truetype'), url('../fonts/arialmt/arialmt.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'AdobeArabic-Regular';
+  src: url('../fonts/AdobeArabic-Regular/AdobeArabic-Regular.eot');
+  src: url('../fonts/AdobeArabic-Regular/AdobeArabic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AdobeArabic-Regular/AdobeArabic-Regular.ttf') format('truetype'),
+        url('../fonts/AdobeArabic-Regular/AdobeArabic-Regular.woff') format('woff'),
+        url('../fonts/AdobeArabic-Regular/AdobeArabic-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamBook';
+  src: url('../fonts/GothamBook/GothamBook.eot');
+  src: local('☺'), url('../fonts/GothamBook/GothamBook.woff') format('woff'), url('../fonts/GothamBook/GothamBook.ttf') format('truetype'), url('fonts/GothamBook.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: 'GothamLight';
+	src: url('../fonts/GothamLight/GothamLight.eot');
+	src: local('☺'), url('../fonts/GothamLight/GothamLight.woff') format('woff'), url('fonts/GothamLight.ttf') format('truetype'), url('../fonts/GothamLight/GothamLight.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+// @type settings    ==============================================
+
+// modular scale settings are located in typography/_modular-scale.scss
+
+// $thin: 100;
+// $light: 300;
+$normal: 400;
+// $medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$ultra-bold: 900;
+
+$font-set-1: 'AdobeArabic-Regular', sans-serif;
+$font-set-2: 'arialmt', Arial, sans-serif;
+$font-set-3: 'GothamBook', Arial, sans-serif;
+$font-set-light: 'GothamLight', Arial, sans-serif;

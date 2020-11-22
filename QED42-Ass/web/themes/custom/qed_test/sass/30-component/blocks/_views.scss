@@ -1,0 +1,104 @@
+.twitter-slider {
+	position: relative;
+	z-index: 5;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	.views-row {
+		padding: 0 20px;
+		@include breakpoint($standard-screen) {
+			padding: 0 100px;
+		}
+	}
+	.slick-arrow {
+		font-size: 0;
+		position: absolute;
+		top: 50%;
+		left: -18px;
+		background: transparent;
+		border: none;
+		outline: none;
+		&:before {
+			content: '';
+			height: 24px;
+			width: 24px;
+			display: block;
+		}
+	}
+	.slick-prev:before{
+		background: url("/themes/custom/qed_test/images/icons/Prev@1X.png") no-repeat;
+	}
+	.slick-next{
+		left: auto;
+		right: -18px;
+		&:before {
+			background: url("/themes/custom/qed_test/images/icons/next\ @1X.png") no-repeat;
+		}
+	}
+	.views-field-title {
+		a{
+			background: url("/themes/custom/qed_test/images/icons/logo\ copy@3X.png") no-repeat;
+			
+			padding-left: 80px;
+			background-size: 70px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			background-position: 0 22px;
+			display: inline-block;
+			color: $white_color;
+			font-size: 1em;
+			text-transform: capitalize;
+			font-family: $font-set-light;
+			@include breakpoint($standard-screen) {
+				background-position: 0 20px;
+				font-size: 1.3em;
+				padding-left: 150px;
+				background-size: 120px;
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+		}
+	}
+	.views-field-field-twit-icon {
+		padding: 0 0 10px;
+		img {
+			margin: 0 auto;
+		}
+	}
+	.views-field-body {
+		p {
+			font-family: $font-set-light;
+			color: $white_color;
+			font-size: 1em;
+			@include breakpoint($standard-screen) {
+				font-size: 1.5em;
+				margin: 25px 0;
+			}
+		}
+	}
+	.views-field-field-twit-author-name {
+		font-family: $font-set-light;
+		color: $white_color;
+		font-size: 0.8em;
+		margin: 25px 0 0;
+		@include breakpoint($standard-screen) {
+			font-size: 1.2em;
+		}
+	}
+}
+
+.view-our-client {
+	.views-field-field-client-image {
+		@include breakpoint($standard-screen) {
+			padding-top: 80px;
+		}
+		img {
+			margin: 20px 30px;
+		}
+	}
+	.views-field-body p {
+		font-size: 1.3em;
+		color:$dark_media_kit;
+		font-family: $font-set-3;
+	}
+}

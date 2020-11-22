@@ -1,0 +1,134 @@
+.our-works {
+	.view-content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.views-row {
+		padding-left: 6px;
+		padding-right: 6px;
+		margin-bottom: 10px;
+		position: relative;
+		@include breakpoint($narrow-screen-max) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.views-field-nothing {
+			position: relative;
+			cursor: pointer;
+			.our-works-wrap {
+				&::after {
+					content: '';
+					background: rgba(255, 75, 90, 0.7);
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					left: 0;
+					top: 0;
+					z-index: 5;
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.5s ease-out;
+				}
+			}
+			.txt-overlay {
+		    position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: 7;
+				margin: 20px;
+				border: 1px solid $white_color;
+				text-align: center;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.5s ease-out;
+				.txt-overlay-wrap {
+					position: relative;
+					z-index: 7;
+					padding: 20px;
+				}
+			}
+			img {
+				width: 100%;
+			}
+			h3 {
+				color: $white_color;
+				font-size: 1.3em;
+				font-weight: 900;
+				font-family: $font-set-3;
+			}
+			p {
+				color: $white_color;
+				font-size: 1.3em;
+				font-family: $font-set-3;
+				line-height: normal;
+			}
+			.links-icons {
+				margin-top: 30px;
+				a{
+					font-size: 0;
+					display: block;
+					&:after {
+						content: "";
+						background: url("/themes/custom/qed_test/images/icons/CompositeLayer@1X.png") no-repeat;
+						background-size: cover;
+						height: 100px;
+						width: 100px;
+						display: block;
+						margin: 0 auto;
+					}
+				}
+			}
+			&:hover {
+				.our-works-wrap:after,
+				.txt-overlay  {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	.pager {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include breakpoint($standard-screen) {
+			top: 30px;
+			right: 100px;
+		}
+		.pager__item.is-active {
+			font-size: 0;
+			background: url("/themes/custom/qed_test/images/icons/Prev-grey.png") no-repeat;
+			height: 24px;
+			width: 24px;
+			display: inline-block;
+			vertical-align: middle
+		}
+		.pager__item--previous a{
+			background: url("/themes/custom/qed_test/images/icons/Prev-active.png")  no-repeat;
+			height: 24px;
+			width: 24px;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 0;
+		}
+		.pager__item--next a{
+			background: url("/themes/custom/qed_test/images/icons/next-active.png") no-repeat;
+			height: 24px;
+			width: 24px;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 0;
+		}
+		.pager__item--previous + .pager__item.is-active {
+			font-size: 0;
+			background: url("/themes/custom/qed_test/images/icons/next-grey.png") no-repeat;
+			height: 24px;
+			width: 24px;
+			display: inline-block;
+			vertical-align: middle
+		}
+	}
+}

@@ -1,0 +1,24 @@
+
+
+@mixin highlight-box{
+  position: relative;
+  font-family: $font-set-2;
+  color: darken($dark-grey, 10%);
+  line-height: ms(2);
+  margin: ms(3) ms() ms(3) 0;
+  padding: ms(1) ms(-1) ms(1) ms(1);
+  z-index: 1;
+  font-size: ms(1);
+  border: 2px solid $orange;
+  a{
+    color: white;
+  }
+  @include breakpoint($narrow-screen) {
+    margin: ms(3) ms(6) ms(3) ms(3);
+    padding: ms(3) ms() ms(3) ms(2);
+  }
+  @include breakpoint($medium-screen $medium-screen-max) {
+    margin-left: ms(6);
+    margin-right: ms(6);
+  }
+}

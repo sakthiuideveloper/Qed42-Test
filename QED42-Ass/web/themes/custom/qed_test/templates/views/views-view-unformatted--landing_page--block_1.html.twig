@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="article">
+{% for row in rows %}
+ 	{% set row_classes = [default_row_class ? 'views-row',] %}
+	 {% if row.content['#row']._entity.field_image_position[0].value == 'image_left' %}
+			<div class="{{row_classes}} article__wrap row article__img-left">
+					<div class="article__img col-md-6">
+						<div class="desktop-img">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_desktop_image }}'] }}</div>
+						<div class="mobile-img">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_mobile_image }}'] }}</div>
+					</div>
+					<div class="article__content col-md-6">
+						<h2>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}'] }}</h2>
+						<div class="desc">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_description }}'] }}</div>
+						<div class="body-text"> {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}</div>
+						 <div class="readmore"><a href="#" class="btn btn-orange">Read More</a></div>
+					</div>
+			</div>
+	{% endif %}
+{% endfor %}
+{% for row in rows %}
+ 	{% set row_classes = [default_row_class ? 'views-row',] %}
+		{% if row.content['#row']._entity.field_image_position[0].value == 'image_right' %}
+			<div class="article__wrap row article__img-right">
+					<div class="article__content  col-md-6">
+						<h2>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}'] }}</h2>
+						<div class="desc">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_description }}'] }}</div>
+						<div class="body-text"> {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}</div>
+						<div class="readmore"><a href="#" class="btn btn-green">Read More</a></div>
+					</div>
+					<div class="article__img col-md-6">
+						<div class="desktop-img">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_desktop_image }}'] }}</div>
+						<div class="mobile-img">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_mobile_image }}'] }}</div>
+					</div>
+				</div>
+	{% endif %}
+{% endfor %}
+</div>

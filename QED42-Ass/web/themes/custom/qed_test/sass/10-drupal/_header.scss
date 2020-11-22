@@ -1,0 +1,152 @@
+$component: ".header";
+
+#{$component} {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+		z-index: 10;
+		@include breakpoint($medium-screen-max) {
+			position: fixed;
+			top: 0;
+			background: $dark-grey;
+			padding: 10px 10px 5px;
+			box-shadow: 0 1px 10px #100f0f;
+		}
+		@include breakpoint($standard-screen) {
+			top: 50px;
+		}
+	&__inner {
+		max-width: 1260px;
+		margin: 0 auto;
+		padding-left: 15px;
+		padding-right: 15px;
+		
+	}
+	&__inner--wrap {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+	}
+	&__branding--block {
+		@include breakpoint($medium-screen-max) {
+			width: 120px;
+		}
+		@include breakpoint($small-screen-max) {
+			flex: 0 0 25%;
+		}
+		@include breakpoint($standard-screen) {
+			flex: 0 0 8%;
+		}
+		img {
+			width: 100%;
+		}
+		.site-logo {
+			display: block;
+			line-height: 35px;
+		}
+	}
+	&__primary--menu--block {
+		@include breakpoint($medium-screen-max) {
+			display: block;
+			position: absolute;
+			width: 100%;
+			background: $dark-grey;
+			top: 62px;
+			right: -100%;
+			padding: 30px;
+			transition: all 0.5s ease-out;
+		}
+		@include breakpoint($standard-screen) {
+			flex: 0 0 85%;
+			line-height: 45px;
+		}
+		.menu--main {
+			.menu {
+				padding: 0;
+				margin: 0;
+				@include breakpoint($standard-screen) {
+					text-align: right;
+				}
+				.menu-item {
+					@include breakpoint($standard-screen) {
+						display: inline-block;
+						padding: 0 10px;
+					}
+					a{
+							color: $white_color;
+							font-size: 1.1em;
+							font-family: $font-set-2;
+							text-decoration: none;
+							text-transform: uppercase;
+							transition: all 0.5s ease-out;
+							padding: 8px 20px;
+							@include breakpoint($medium-screen-max) {
+								font-size: 0.9em;
+								display: block;
+							}
+						&:hover, &:focus, &.is-active {
+							@include breakpoint($medium-screen-max) {
+								color: $orange;
+							}
+							@include breakpoint($standard-screen) {
+								background: $orange;
+								border-radius: 50px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&__search-block {
+		flex: 0 0 5%;
+		text-align: center;
+		line-height: 45px;
+
+		@include breakpoint($medium-screen-max) {
+			flex: 0 0 80%;
+			text-align: right;
+		}
+		@include breakpoint($narrow-screen-max) {
+			flex: 0 0 75%;
+		}
+		.fa-search {
+			color: $white_color;
+			cursor: pointer;
+			font-size: 1.1em;
+			transform: rotate(0deg);
+			transition: all 0.5s ease-out;
+			&:hover, &:focus {
+					color: $orange;
+					transform: rotate(360deg);
+			}
+		}
+		.fa-align-center {
+			display: none;
+			color: $white_color;
+			cursor: pointer;
+			font-size: 1.3em;
+			transition: all 0.5s ease-out;
+			padding-left: 20px;
+			&:hover, &:focus {
+				color: $orange;
+			}
+			@include breakpoint($medium-screen-max) {
+				display: inline-block;
+				margin: 0 1%;
+			}
+		}
+	}
+}
+
+.menu_act {
+	.header__primary--menu--block {
+		right: 0;
+	}
+}
+.header-not-front {
+    position: relative;
+    top: 0;
+	background: $dark-blue;
+	padding: 8px 0;
+}

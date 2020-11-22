@@ -1,0 +1,121 @@
+.block-views-blockour-works-block-1 {
+	position: relative;
+	h2 {
+		text-align: center;
+		font-weight: 900;
+		color: $dark-grey;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 2px solid $light_media_kit;
+		font-size: 24px;
+		@include breakpoint($standard-screen) {
+			padding-bottom: 50px;
+			margin-bottom: 40px;    
+			margin-left: 100px;
+			margin-right: 100px;
+			font-size: 36px;
+		}
+	}
+}
+
+.block-views-blockbanner-slider-block-1 {
+	padding-top: 50px;
+	position: relative;
+	z-index: 5;
+	@include breakpoint($standard-screen) {
+		padding-top: 150px;
+	}
+	.view-banner-slider {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.sldr {
+		.sldr__img__left img {
+			margin: 0 auto;
+		}
+		.sldr__cnt__right {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			@include breakpoint($standard-screen) {
+				padding-top: 120px;
+				padding-bottom: 120px;
+			}
+			h2 {
+				font-family: $font-set-3;
+				font-size: 2.2em;
+				color: $white_color;
+				@include breakpoint($narrow-screen-max) {
+					font-size: 1.5em;
+				}
+			}
+			p {
+				font-family: $font-set-light;
+				font-size: 1.2em;
+				color: $white_color;
+				@include breakpoint($narrow-screen-max) {
+					font-size: 1em;
+				}
+			}
+		}
+	}
+	.slick-arrow {
+		font-size: 0;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		background: transparent;
+		border: 1px solid $white_color;
+		outline: none;
+		padding: 10px;
+		margin-top: -50px;
+		transition: all 0.5s ease-out;
+		z-index: 11;
+		@include breakpoint($standard-screen) {
+			padding: 20px;
+			left: 0;
+		}
+		@include breakpoint($wide-screen) {
+			left: -50px;
+		}
+		&:before {
+			content: '';
+			height: 24px;
+			width: 24px;
+			display: block;
+		}
+		&:hover {
+			border-color: $orange;
+		}
+	}
+	.slick-prev:before{
+		background: url("/themes/custom/qed_test/images/icons/Prev@1X.png") no-repeat;
+	}
+	.slick-next{
+		left: auto;
+		right: 0;
+		@include breakpoint($standard-screen) {
+			right: 0;
+		}
+		@include breakpoint($wide-screen) {
+			right: -50px;
+		}
+		&:before {
+			background: url("/themes/custom/qed_test/images/icons/next\ @1X.png") no-repeat;
+		}
+	}
+}
+
+.block-views-blockour-client-block-1 {
+	text-align: center;
+	@include breakpoint($standard-screen) {
+		padding: 0 0 80px;
+	}
+	h2 {
+		font-size: 1.5em;
+		color: $dark-grey;
+    font-weight: 900;
+		@include breakpoint($standard-screen) {
+			font-size: 2em;
+		}
+	}
+}

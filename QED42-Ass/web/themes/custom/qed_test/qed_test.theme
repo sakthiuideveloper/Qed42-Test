@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in qed_test_theme.
+ */
+use Drupal\Core\Theme\ThemeSettings;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Xss;
+use Drupal\file\Plugin\Core\Entity\FileInterface;
+
+
+function qed_test_preprocess_page(&$variables) {
+	$face_book = theme_get_setting('face_book');
+	$twitter = theme_get_setting('twitter');
+	$linkedin = theme_get_setting('linkedin');
+	$instagram = theme_get_setting('instagram');
+	$copyrights = theme_get_setting('copyrights');
+      //Social Icons
+  $variables['face_book'] = theme_get_setting('face_book','qed_test');
+  $variables['twitter'] = theme_get_setting('twitter','qed_test');
+  $variables['linkedin'] = theme_get_setting('linkedin','qed_test');
+  $variables['instagram'] = theme_get_setting('instagram','qed_test');
+  $variables['copyrights'] = theme_get_setting('copyrights','qed_test');
+}
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param $form
+ *   The form.
+ * @param $form_state
+ *   The form state.
+ */
+
+function qed_test_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['qed_test_settings']['social_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Social Media Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'tabs',
+  ];
+  $form['qed_test_settings']['social_settings']['face_book'] = [
+    '#type' => 'textfield',
+    '#title' => t('Facebook'),
+    '#default_value' => theme_get_setting('face_book', 'qed_test'),
+  ];
+  $form['qed_test_settings']['social_settings']['twitter'] = [
+    '#type' => 'textfield',
+    '#title' => t('Twitter'),
+    '#default_value' => theme_get_setting('twitter', 'qed_test'),
+  ];
+  $form['qed_test_settings']['social_settings']['linkedin'] = [
+    '#type' => 'textfield',
+    '#title' => t('Linked in'),
+    '#default_value' => theme_get_setting('linkedin', 'qed_test'),
+  ];
+  $form['qed_test_settings']['social_settings']['instagram'] = [
+    '#type' => 'textfield',
+    '#title' => t('Instagram'),
+    '#default_value' => theme_get_setting('instagram', 'qed_test'),
+  ];
+  $form['qed_test_settings']['copy_right_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Copy rights'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'tabs',
+  ];
+  $form['qed_test_settings']['copy_right_settings']['copyrights'] = [
+    '#type' => 'textfield',
+    '#title' => t('Copyrights'),
+    '#default_value' => theme_get_setting('copyrights', 'qed_test'),
+	];
+	$form['#submit'][] = 'qed_test_settings_form_submit';
+}

@@ -1,0 +1,13 @@
+@mixin highlight-type{
+  font-size: ms(1);
+  line-height: ms(1);
+  font-family: $font-set-3;
+  color: $dark-blue;
+  font-style: italic;
+  @include breakpoint($narrow-screen) {
+    font-size: 1.7em;
+  }
+  b,strong{
+    font-weight: $normal;
+  }
+}

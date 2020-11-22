@@ -1,0 +1,72 @@
+@mixin btn {
+  border: 1px solid transparent;
+  font-weight: $semi-bold;
+  font-family: $font-set-3;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: ms();
+  overflow: hidden;
+  text-decoration: none;
+  transition: background-color .3s ease-out, border-color .3s ease-out;
+  margin-right: ms();
+  margin-bottom: ms();
+  text-decoration: none;
+  border: 0;
+  padding: .56em ms(5);
+  border: 1px solid $dark-blue;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+  transition: all .2s;
+  background-color: #fff;
+  @include reset-tap;
+  @include breakpoint($narrow-screen) {
+    padding: .56em ms(5);
+  }
+  @include breakpoint($standard-screen) {
+    padding: .56em ms(5);
+  }
+
+  &:hover,&:focus, &:active {
+    box-shadow: 1px 5px 6px 0px rgba(0,0,0,0.2);
+  }
+}
+
+
+// primary button styles, eg. submit buttons
+@mixin btn-primary {
+  @include btn;
+  color: #fff;
+  border: 1px solid $orange-aoda;
+  color: $orange-aoda;
+  &:hover,&:focus,&:active {
+
+  }
+}
+
+
+// secondary button styles, eg. cancel or preview buttons
+@mixin btn-secondary {
+  @include btn;
+   color: $dark-blue;
+  background-color: #fff;
+  &:hover,&:focus, &:active {
+
+  }
+}
+
+
+// a flat simple button style with no default background color.
+// NOT an extension of .btn
+@mixin btn-flat {
+  position: relative;
+  overflow: hidden;
+  @include reset-tap;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  padding: ms(-8) ms(-1);
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: ms(-1);
+  vertical-align: bottom;
+}

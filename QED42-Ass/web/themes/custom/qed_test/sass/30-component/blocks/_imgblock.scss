@@ -1,0 +1,38 @@
+$component: ".imgblock";
+
+#{$component} {
+  &__content {
+    h2 {
+      font-weight: 900;
+      color: $dark-grey;
+      font-size: 24px;
+      @include breakpoint($standard-screen) {
+        font-size: 36px;
+      }
+    }
+    p {
+      font-family: $font-set-3;
+      font-size: 1.2em;
+      color: $dark-grey;
+      @include breakpoint($narrow-screen-max) {
+        font-size: 1em;
+      }
+    }
+    .txt-lg {
+      font-family: $font-set-3;
+      color: $dark-grey;
+      strong {
+        color: $dark-grey;
+      }
+    }
+  }
+  &__img {
+    @include breakpoint($narrow-screen-max) {
+      margin-top: 30px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
